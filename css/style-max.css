@@ -127,4 +127,17 @@
   .portfolio .wrap .portfolioPart h3 {
     text-decoration: underline;
   }
+  .messages {
+    padding: 114px 0 123px;
+    text-align: center;
+  }
+  .messages .wrap p {
+    margin-bottom: 30px;
+  }
+  .messages .wrap a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
 }
