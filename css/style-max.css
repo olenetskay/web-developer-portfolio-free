@@ -52,9 +52,13 @@
     padding: 33px 0 31px;
     margin: 0;
   }
-  header nav ul li {
+  header nav ul .index {
+    color: #070707;
+  }
+  header nav ul li a {
     padding: 0;
     margin: 0;
+    color: #828282;
   }
   .headerWrap {
     border-bottom: 1px solid #000;
@@ -111,5 +115,16 @@
   .skills .wrap .skillbox .skillbox-item h3 {
     text-transform: uppercase;
     text-align: center;
+  }
+  .portfolio {
+    background-color: #F6F6F6;
+    padding: 112px 0 96px;
+    text-align: center;
+  }
+  .portfolio .wrap .portfolioPart {
+    margin: 47px auto 74px;
+  }
+  .portfolio .wrap .portfolioPart h3 {
+    text-decoration: underline;
   }
 }
