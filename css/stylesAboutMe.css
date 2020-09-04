@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Gilroy Medium', sans-serif;
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../font/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Gilroy Bold', sans-serif;
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('Gilroy-Bold.woff2') format('woff2'),
+        url('Gilroy-Bold.woff') format('woff'),
+        url('Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+@media screen and (min-width: 1224px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy Medium', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+    font-weight: 500;
+  }
+  a {
+    text-decoration: none;
+    color: #070707;
+  }
+  h2 {
+    font-family: 'Gilroy Bold', sans-serif;
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+  .wrap {
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  header nav ul {
+    font-family: 'Gilroy Bold', sans-serif;
+    font-weight: 700;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 33px 0 31px;
+    margin: 0;
+  }
+  header nav ul .index {
+    color: #070707;
+  }
+  header nav ul li a {
+    padding: 0;
+    margin: 0;
+    color: #828282;
+  }
+  .headerWrap {
+    border-bottom: 1px solid #000;
+  }
+  .aboutMe {
+    padding: 80px 0 100px;
+  }
+  .aboutMe1 .wrap .about .img {
+    width: 50%;
+    height: auto;
+    margin-right: 15px;
+  }
+  .aboutMe1 .wrap .about1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .aboutMe1, .aboutMe2, .aboutMe3  {
+    padding: 80px 0 100px;
+  }
+  .aboutMe2 {
+    background-color: #F6F6F6;
+  }
+  .aboutMe2 .wrap {
+    position: relative;
+  }
+  .aboutMe2 .wrap .image img {
+    margin-top: 50px;
+    width: 950px;
+    height: auto;
+  }
+  .aboutMe3 {
+    text-align: center;
+  }
+  .aboutMe3 .wrap p {
+    margin-bottom: 50px;
+  }
+  .aboutMe3 .wrap a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 40px;
+  }
+}
