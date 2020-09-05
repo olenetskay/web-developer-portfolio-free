@@ -16,9 +16,11 @@
     font-weight: 700;
     font-style: normal;
   }
-body {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
+}
+body {
   font-family: 'Gilroy Medium', sans-serif;
   font-size: 18px;
   line-height: 22px;
@@ -42,71 +44,128 @@ h1 {
   font-family: 'Gilroy Bold', sans-serif;
   font-size: 35px;
   font-weight: 700;
-  line-height: 59px;
+  line-height: 50px;
 }
-@media screen and (min-width: 1224px) {
-  .wrap {
-    max-width: 950px;
-    margin: 0 auto;
+#checkBox, .toggle {
+  display: none;
+}
+.wrap {
+  max-width: 950px;
+  margin: 0 auto;
+}
+header nav ul {
+  font-family: 'Gilroy Bold', sans-serif;
+  font-weight: 700;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 0 31px;
+  margin: 0;
+}
+header nav ul .index {
+  color: #070707;
+}
+header nav ul li a {
+  padding: 0;
+  margin: 0;
+  color: #828282;
+}
+.headerWrap {
+  border-bottom: 1px solid #000;
+}
+.aboutMe {
+  padding: 80px 0 100px;
+}
+.aboutMe1 .wrap .about img {
+  width: 50%;
+  height: auto;
+  margin-right: 15px;
+  margin-top: 30px;
+}
+.aboutMe1 .wrap .about1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutMe1, .aboutMe2, .aboutMe3  {
+  padding: 80px 0 100px;
+}
+.aboutMe2 {
+  background-color: #F6F6F6;
+}
+.aboutMe2 .wrap .image img {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+}
+.aboutMe3 {
+  text-align: center;
+}
+.aboutMe3 .wrap p {
+  margin-bottom: 50px;
+}
+.aboutMe3 .wrap a {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-top: 40px;
+}
+@media screen and (max-width: 765px) {
+  .toggle {
+    clear: both;
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    line-height: 40px;
+    width: 100%;
+    transition: all .1s linear;
   }
-  header nav ul {
-    font-family: 'Gilroy Bold', sans-serif;
-    font-weight: 700;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 33px 0 31px;
-    margin: 0;
-  }
-  header nav ul .index {
-    color: #070707;
-  }
-  header nav ul li a {
-    padding: 0;
-    margin: 0;
-    color: #828282;
-  }
-  .headerWrap {
-    border-bottom: 1px solid #000;
-  }
-  .aboutMe {
-    padding: 80px 0 100px;
-  }
-  .aboutMe1 .wrap .about .img {
-    width: 50%;
-    height: auto;
-    margin-right: 15px;
-  }
-  .aboutMe1 .wrap .about1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .aboutMe1, .aboutMe2, .aboutMe3  {
-    padding: 80px 0 100px;
-  }
-  .aboutMe2 {
+  .toggle:hover { /*при наведении анимация*/
     background-color: #F6F6F6;
   }
-  .aboutMe2 .wrap {
-    position: relative;
+  #checkBox:checked + label .touch li {
+    opacity: 1; /*при нажатии на кнопку появляется список*/
+    visibility: visible;
+    transition: all .2s linear;
   }
-  .aboutMe2 .wrap .image img {
-    margin-top: 50px;
-    width: 950px;
+  #checkBox:checked + label .touch {
+    height: 500px; /*высота появления*/
+  }
+  .menu { /*прописывается невидимость при закрытой кнопке и положение списка  открытой*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    transition: height .7s linear;
+  }
+  .menu li { /*невидимость списка при закрытой кнопке*/
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .wrap {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  img {
+    width: 100%;
     height: auto;
   }
-  .aboutMe3 {
-    text-align: center;
+  .aboutMe1 .wrap .about1 {
+    flex-wrap: wrap;
   }
-  .aboutMe3 .wrap p {
-    margin-bottom: 50px;
+  .aboutMe1 .wrap .about1 img {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .aboutMe3 .wrap a {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    margin-top: 40px;
+    font-size: 16px;
   }
 }

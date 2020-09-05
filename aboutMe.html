@@ -2,20 +2,24 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Portfolio</title>
+    <title>Что-то про меня</title>
     <link rel="stylesheet" href="css/stylesAboutMe.css">
   </head>
   <body>
     <header>
       <div class="wrap headerWrap">
         <nav>
-          <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="" class="index">Что-то про меня</a></li>
-            <li><a href="#">Что умею</a></li>
-            <li><a href="#">Что сделал</a></li>
-            <li><a href="#">Как связаться</a></li>
-          </ul>
+          <input type="checkbox" id="checkBox">
+          <label for="checkBox">
+            <ul class="menu touch">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="" class="index">Что-то про меня</a></li>
+              <li><a href="#">Что умею</a></li>
+              <li><a href="#">Что сделал</a></li>
+              <li><a href="#">Как связаться</a></li>
+            </ul>
+            <span class="toggle">☰</span>
+          </label>
         </nav>
       </div> <!-- wrap headerWrap -->
     </header>
@@ -23,9 +27,8 @@
       <div class="wrap">
         <h1>Оленецкий, кто это?</h1>
         <div class="about about1">
-          <img src="img/about1.jpg" alt="А вот собственно и я" class="img">
+          <img src="img/about1.jpg" alt="А вот собственно и я">
           <div class="aboutMeText">
-            <h2>Итак, меня зовут Оленецкий (под этим именем я существую уже несколько лет).</h2>
             <p>Интересоваться фронтендом начал с 13 лет, еще в школе. С этим мне помогли мои преподаватели - посоветовали, куда идти и что учить, потому что курсов в тот момент еще не существовало. Делал базовые странички, потихоньку изучал HTML и CSS. В конце концов понял, что мне это нравится и начал брать заказы.</p>
           </div> <!-- aboutMeText -->
         </div> <!-- about -->
