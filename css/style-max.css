@@ -17,28 +17,46 @@
     font-style: normal;
   }
 
-@media screen and (min-width: 1224px) {
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gilroy Medium', sans-serif;
-    font-size: 18px;
-    line-height: 22px;
-    color: #070707;
-    font-weight: 500;
-  }
-  a {
-    text-decoration: none;
-    color: #070707;
-  }
-  h2 {
-    font-family: 'Gilroy Bold', sans-serif;
-    font-size: 34px;
-    line-height: 42px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 17px;
-  }
+html, body {
+  overflow-x: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy Medium', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #070707;
+  font-weight: 500;
+}
+#checkBox, .toggle { /*изначально чекбокс и кнопка невидимы */
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: #070707;
+}
+h2 {
+  font-family: 'Gilroy Bold', sans-serif;
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 17px;
+}
+h1 {
+  max-width: 400px;
+  font-family: 'Gilroy Bold', sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 59px;
+}
+
+@media screen and (min-width: 766px) {
   .wrap {
     max-width: 950px;
     margin: 0 auto;
@@ -70,13 +88,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-  }
-  .name .wrap .nameBox .name-h1 {
-    max-width: 400px;
-    font-family: 'Gilroy Bold', sans-serif;
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 59px;
   }
   .name .wrap .nameBox .name-p {
     max-width: 400px;
@@ -139,5 +150,41 @@
     color: #fff;
     padding: 10px 20px;
     border-radius: 30px;
+  }
+}
+@media screen and (max-width: 765px) { /*для экранов меньше 765 пикселей*/
+  .toggle { /*кнопка появляется*/
+    clear: both;
+    display: block;
+    text-align: center; /*здесь можно указать любое расположение */
+    font-size: 14px;
+    line-height: 40px;
+    width: 100%;
+    transition: all .1s linear; /*красивая анимация*/
+  }
+  .toggle:hover { /*при наведении анимация*/
+    background-color: #F6F6F6;
+  }
+  #checkBox:checked + label .touch li {
+    opacity: 1; /*при нажатии на кнопку появляется список*/
+    visibility: visible;
+    transition: all .2s linear;
+  }
+  #checkBox:checked + label .touch {
+    height: 500px; /*высота появления*/
+  }
+  .menu { /*прописывается невидимость при закрытой кнопке и положение списка  открытой*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0px;
+    transition: height .7s linear;
+  }
+  .menu li { /*невидимость списка при закрытой кнопке*/
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
   }
 }
