@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Gilroy Medium', sans-serif;
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../font/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Gilroy Bold', sans-serif;
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('Gilroy-Bold.woff2') format('woff2'),
+        url('Gilroy-Bold.woff') format('woff'),
+        url('Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy Medium', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+    font-weight: 500;
+  }
+  a {
+    text-decoration: none;
+    color: #070707;
+  }
+  h2 {
+    font-family: 'Gilroy Bold', sans-serif;
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+  }
+  h1 {
+    max-width: 400px;
+    font-family: 'Gilroy Bold', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+  .wrap {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  header nav ul {
+    font-family: 'Gilroy Bold', sans-serif;
+    font-weight: 700;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 33px 0 31px;
+    margin: 0;
+  }
+  header nav ul .index {
+    color: #070707;
+  }
+  header nav ul li a {
+    padding: 0;
+    margin: 0;
+    color: #828282;
+  }
+  .headerWrap {
+    border-bottom: 1px solid #000;
+  }
+  #checkBox, .toggle {
+    display: none;
+  }
+@media screen and (max-width: 765px) {
+  .toggle {
+    clear: both;
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    line-height: 40px;
+    width: 100%;
+    transition: all .1s linear;
+  }
+  .toggle:hover {
+    background-color: #F6F6F6;
+  }
+  #checkBox:checked + label .touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all .2s linear;
+  }
+  #checkBox:checked + label .touch {
+    height: 500px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    transition: height .7s linear;
+  }
+  .menu li {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .wrap {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
